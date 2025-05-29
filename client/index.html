@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>StreamZone</title>
+</head>
+<body>
+  <div id="main-content"></div>
+
+  <script>
+    fetch('home/home.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('main-content').innerHTML = html;
+      });
+  </script>
+</body>
+</html>
