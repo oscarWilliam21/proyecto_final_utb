@@ -1,7 +1,8 @@
 from flask import jsonify
 from werkzeug.security import check_password_hash
+from api.config.generate_token import create_token
 from database.conexion_mongodb import db
-from model.user_model import user_schema  # Asegúrate de tener este importado
+from model.user_model import user_schema 
 
 def login_user(data):
     correo = data.get("correo")
@@ -18,9 +19,11 @@ def login_user(data):
     if not check_password_hash(usuario["password"], password):
         return jsonify({"status": "error", "message": "Contraseña incorrecta"}), 401
     
+    token = create_token(usuario["_id"])
+    
     return jsonify({
         "status": "success",
-        "token": "fake-jwt-token",
+        "token": token,
         "usuario": user_schema(usuario)
     }), 200
 
