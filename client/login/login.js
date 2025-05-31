@@ -1,7 +1,7 @@
 document.getElementById("login-form").addEventListener("submit", async function (e) {
     e.preventDefault(); // Evita recargar la página
 
-    const username = document.getElementById("username").value;
+    const correo = document.getElementById("correo").value;
     const password = document.getElementById("password").value;
 
     const response = await fetch("http://127.0.0.1:5000/api/auth/login", {
@@ -10,7 +10,7 @@ document.getElementById("login-form").addEventListener("submit", async function 
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: username,
+            correo: correo,
             password: password
         })
     });
