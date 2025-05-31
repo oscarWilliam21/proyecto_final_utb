@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="fondo"> <!--fondo de la imagen -->
+
+  <div class="capa-fondo"> <!--capa  -->
+
+    <div class="login container">
+
+      <div class="contenido">
+        <h1>inicia sesion</h1>
+
+        <form action="/login" method="POST">
+<div class="input-group">
+              <input type="text" name="username" id="username" placeholder=" " required />
+              <label for="username">Email o número celular</label>
+            </div>
+            <div class="input-group">
+              <input type="password" name="password" id="password" placeholder=" " required />
+              <label for="password">Contraseña</label>
+            </div>
+            <div>
+              <button type="submit">Iniciar sesión</button>
+            </div>
+            <div>
+              <a href="#">¿Olvidaste la contraseña?</a>
+            </div>
+            <div>
+              <input type="checkbox" id="recordarme" />
+              <label for="recordarme">Recordarme</label>
+            </div>
+            <div>
+              <p>¿Primera vez en Stream Zone?</p>
+              <button class="suscribirse-btn" type="button">Suscríbete ya</button>
+            </div>
+
+        </form> <!--fin form  -->
+
+      </div> <!--fin contenido  -->
+
+    </div> <!--fin container  -->
+
+  </div> <!--fin capa  -->
+
+</div> <!--fin fondo  -->
+
+<div class="footer container">
+  <footer>
+    <p>¿Preguntas? Llama al <a href="tel:011111111111">01 111 111 1111</a> (sin cargo)</p>
+    <ul class="footer-links">
+      <li><a href="#">Preguntas frecuentes</a></li>
+      <li><a href="#">Centro de ayuda</a></li>
+      <li><a href="#">Términos de uso</a></li>
+      <li><a href="#">Privacidad</a></li>
+    </ul>
+    <div class="language-selector">
+      <button>🌐 Español ▼</button>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
