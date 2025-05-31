@@ -1,7 +1,7 @@
 import os
 from flask import Blueprint, jsonify, request
 import jwt
-from api.config.generate_token import create_access_token
+from config.generate_token import create_access_token
 from controllers.auth_controller import login_user
 from dotenv import load_dotenv
 

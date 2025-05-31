@@ -1,6 +1,6 @@
 from flask import jsonify
 from werkzeug.security import check_password_hash
-from api.config.generate_token import create_refresh_token, create_access_token
+from config.generate_token import create_refresh_token, create_access_token
 from database.conexion_mongodb import db
 from model.user_model import user_schema 
 
