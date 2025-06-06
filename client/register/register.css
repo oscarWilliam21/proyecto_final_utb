@@ -1,0 +1,167 @@
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://wallpapers.com/images/hd/4k-streaming-4444-x-2500-wallpaper-skd2szrwinjk8fnx.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+   .titulo-registro {
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 19px;
+  }
+
+  .titulo-registro .stream {
+  color: #d8a713; /* Amarillo tipo STREAM */
+  font-size: 26px;
+  display: block;
+  }
+
+  .titulo-registro .zone {
+  color: #d8a91b; /* Puedes cambiar a otro tono si quieres contraste */
+  font-size: 26px;
+  font-weight: 20px;
+  display: block;
+  }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 75vh;
+    }
+
+    .panel {
+      background-color: rgba(7, 1, 1, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 90%;
+      backdrop-filter: blur(5px);
+    }
+
+    .panel h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #cec9c9;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .campo-flotante {
+      position: relative;
+    }
+
+    .campo-flotante input,
+    .campo-flotante select {
+      width: 90%;
+      padding: 12px 10px;
+      border: 1px solid #ec2a23;
+      border-radius: 6px;
+      background: none;
+      font-size: 16px;
+    }
+
+    .campo-flotante label {
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      color: #ffffff;
+      padding: 0 5px;
+      transition: 0.2s ease all;
+      pointer-events: none;
+    }
+
+    .campo-flotante input:focus + label,
+    .campo-flotante input:not(:placeholder-shown) + label,
+    .campo-flotante select:focus + label,
+    .campo-flotante select:not([value=""]) + label {
+      top: -10px;
+      font-size: 12px;
+      color: #000000;
+      background: #ec2a23;
+      border-radius: 20px;
+    }
+
+    .btn {
+      padding: 10px;
+      background-color: #8da813;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+     font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #a01616e5;
+      color: #000000;
+    }
+
+    .link-login {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .link-login a {
+      color: #e4baba;
+      text-decoration: none;
+    }
+
+    .link-login a:hover {
+      text-decoration: underline;
+    }
+
+.footer-container {
+  background-color: #141414;
+  color: #aaa;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-container footer p {
+  margin-bottom: 1rem;
+}
+
+.footer-container a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.language-selector button {
+  background: none;
+  border: 1px solid #555;
+  color: #aaa;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.language-selector button:hover {
+  background-color: #2a2a2a;
+  border-color: #888;
+}

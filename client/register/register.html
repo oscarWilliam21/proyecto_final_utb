@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    
+ <div class="fondo-transparente form-registro">
+
+<h2 class="titulo-registro">
+  <span class="stream">STREAM</span><br>
+  <span class="zone">ZONE</span>
+</h2>
+
+    <div class="container">
+    <div class="panel">
+
+      <h1>REGISTRO</h1>
+
+      <form action="/registrar" method="POST">
+        <div class="campo-flotante">
+          <input type="text" name="nombre" id="nombre" class="campo-nombre" placeholder=" " required>
+          <label for="nombre">Nombre completo</label>
+        </div>
+
+        <div class="campo-flotante">
+          <input type="email" name="correo" id="correo" class="campo-correo" placeholder=" " required>
+          <label for="correo">Correo electrónico</label>
+        </div>
+
+        <div class="campo-flotante">
+          <input type="password" name="password" id="password" class="campo-contrasena" placeholder=" " required>
+          <label for="contrasena">Contraseña</label>
+        </div>
+
+        <div class="campo-flotante">
+          <input type="tel" name="telefono" id="telefono" class="campo-telefono" placeholder=" " required pattern="[0-9]{10}">
+          <label for="telefono">Teléfono</label>
+        </div>
+
+        <div class="campo-flotante">
+          <select name="plan" id="plan" class="campo-plan" required>
+            <option value="" disabled selected></option>
+            <option value="gratis">Gratis</option>
+            <option value="basico">Básico</option>
+            <option value="premium">Premium</option>
+          </select>
+          <label for="plan">Plan</label>
+        </div>
+
+        <button type="submit" class="btn">Registrarse</button>
+      </form>
+
+      <div class="link-login">
+        ¿Ya tienes cuenta? <a href="/login">Inicia sesión</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer-container">
+  <footer>
+    <p>¿Preguntas? Llama al <a href="tel:011111111111">01 111 111 1111</a> (sin cargo)</p>
+    <ul class="footer-links">
+      <li><a href="#">Preguntas frecuentes</a></li>
+      <li><a href="#">Centro de ayuda</a></li>
+      <li><a href="#">Términos de uso</a></li>
+      <li><a href="#">Privacidad</a></li>
+    </ul>
+    <div class="language-selector">
+      <button>🌐 Español ▼</button>
+    </div>
+  </footer>
+</body>
+</html>

@@ -120,7 +120,7 @@ def send_reset_email(data):
     token = jwt.encode({
         "user_id": str(usuario["_id"]),
         "exp": datetime.utcnow() + timedelta(minutes=15)
-    }, SECRET_KEY, algorithm="HS256")
+    }, str(SECRET_KEY), algorithm="HS256")
 
     reset_url = f"{FRONTEND_URL}/reset-password?token={token}"
 
@@ -167,7 +167,7 @@ def reset_password(data):
         return jsonify({"error": "La contraseña debe tener al menos 6 caracteres"}), 400
 
     try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        payload = jwt.decode(token, str(SECRET_KEY), algorithms=["HS256"])
         user_id = payload.get("user_id")
     except jwt.ExpiredSignatureError:
         return jsonify({"error": "El enlace ha expirado"}), 400
