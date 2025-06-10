@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>StreamZone</title>
 </head>
 <body>
-  <div id="main-content"></div>
-
-  <script>
-    fetch('home/home.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('main-content').innerHTML = html;
-      });
-  </script>
+  <!-- Usa iframe para cargar landing completa -->
+  <iframe src="landing/landingPage.html" style="width:100%; height:100vh; border:none;"></iframe>
 </body>
 </html>
