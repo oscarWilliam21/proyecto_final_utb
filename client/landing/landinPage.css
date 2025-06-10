@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url('../assets/images/portadasLandigPage.jpeg') no-repeat center center/cover;
+    color: white;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+  }
+  
+  header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+  }
+  
+  .logo {
+    width: 150px;
+  }
+  
+  .btn-signin {
+    color: white;
+    background: #d5ac09;
+    padding: 8px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    top: 30%;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .email-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .email-form input {
+    padding: 15px;
+    width: 300px;
+    max-width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .email-form button {
+    padding: 15px 25px;
+    background: #d5ac09;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .email-form button:hover {
+    background: #f40612;
+  }
+  
+  .tendencias {
+    background: linear-gradient(178.6deg, rgb(20, 36, 50) 11.8%, rgb(124, 143, 161) 83.8%);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+  }
+  
+  .tendencias h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .tendencias-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .tendencia-item {
+    position: relative; 
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .tendencia-item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .tendencia-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .numero {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #d5ac09;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .tendencias-grid::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .tendencias-grid::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+  
+  .tendencias-grid::-webkit-scrollbar-track {
+    background: #222;
+  }
+  
+  .footer {
+    background-color: #111;
+    color: #777;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .footer a {
+    color: #777;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-cols .col {
+    min-width: 120px;
+    text-align: left;
+  }
+  
+  .footer-copy {
+    font-size: 12px;
+    color: #555;
+  }
+  
