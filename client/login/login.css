@@ -9,10 +9,24 @@ body {
   background-position: center;
   height: 90vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+
+header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  width: 150px;
+}
 .capa-fondo {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
@@ -73,14 +87,14 @@ h1 {
   left: 0.5rem;
   font-size: 0.75rem;
   color: black;
-  background: #ec2a23;
+  background: #d5ac09;
   padding: 0 5px;
   border-radius: 5px;
 }
 
 .contenido button {
   padding: 0.8rem;
-  background-color: #f54b18;
+  background-color: #d5ac09;
   color: #fffdfd;
   border: none;
   border-radius: 5px;
