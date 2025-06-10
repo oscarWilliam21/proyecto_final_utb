@@ -5,6 +5,27 @@
       background: url('https://wallpapers.com/images/hd/4k-streaming-4444-x-2500-wallpaper-skd2szrwinjk8fnx.jpg') no-repeat center center fixed;
       background-size: cover;
     }
+    header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    .logo {
+      width: 150px;
+    }
    .titulo-registro {
   font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
@@ -109,6 +130,7 @@
     .link-login {
       text-align: center;
       margin-top: 15px;
+      color: white;
     }
 
     .link-login a {
