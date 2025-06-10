@@ -24,7 +24,7 @@ def refresh_token():
         return jsonify({"error": "Refresh token requerido"}), 400
 
     try:
-        payload = jwt.decode(refresh_token, REFRESH_SECRET, algorithms=["HS256"])
+        payload = jwt.decode(refresh_token, str(REFRESH_SECRET), algorithms=["HS256"])
         new_access_token = create_access_token(payload["user_id"])
         return jsonify({"access_token": new_access_token}), 200
     except jwt.ExpiredSignatureError:
