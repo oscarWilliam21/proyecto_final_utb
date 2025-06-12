@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 REFRESH_SECRET = os.getenv("REFRESH_SECRET")
 
-auth_bp = Blueprint('auth', __name__)
+auth_bp = Blueprint('auth_bp', __name__)
 
 @auth_bp.route("/login", methods=["POST"])
 def login():

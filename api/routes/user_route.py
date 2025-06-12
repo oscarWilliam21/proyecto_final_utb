@@ -2,7 +2,7 @@ from bson import ObjectId
 from flask import Blueprint, jsonify, request
 from controllers.user_controller import register_user, reset_password, send_reset_email, update_password, update_user
 
-user_bp = Blueprint('user', __name__)
+user_bp = Blueprint('user_bp', __name__)
 
 #ruta registrar usuario
 @user_bp.route("/register", methods=["POST"])

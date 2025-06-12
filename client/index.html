@@ -6,7 +6,19 @@
   <title>StreamZone</title>
 </head>
 <body>
-  <!-- Usa iframe para cargar landing completa -->
-  <iframe src="landing/landingPage.html" style="width:100%; height:100vh; border:none;"></iframe>
+ 
+<script>
+  //token que se guardo al iniciar sesion y se recupera con getItem
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    // Si hay token, redirige a home
+    window.location.href = "home/home.html";
+  } else {
+    // Si no, redirige a landing
+    window.location.href = "landing/landingPage.html";
+  }
+</script>
+
 </body>
 </html>
