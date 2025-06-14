@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="updatepass.css">
+    <script src="updatepass.js"></script>
+</head>
+<body>
+  <div class="fondo">
+    <div class="form-container">
+      <h2>Restablecer Contraseña</h2>
+      <form action="/restablecer" method="POST">
+        <div class="input-group">
+          <input type="email" id="email" name="email" placeholder="" required />
+          <label for="email">Correo electrónico</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="new-password" name="new-password" placeholder=" " required />
+          <label for="new-password">Nueva contraseña</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="" required />
+          <label for="confirm-password">Confirmar contraseña</label>
+        </div>
+
+        <button type="submit" class="btn">Restablecer</button>
+      </form>
+      <div class="info">
+        ¿Recordaste tu contraseña?
+        <a href="/login">Inicia sesión</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
