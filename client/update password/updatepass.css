@@ -2,6 +2,20 @@
   box-sizing: border-box;
 }
 
+    header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #1a1818;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
 body, html {
   margin: 0;
   padding: 0;
@@ -14,14 +28,14 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #ff4d4d, #ff1a1a);
+background: #1a1818;
 }
 
 .form-container {
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 400px;
 }
@@ -54,7 +68,6 @@ h2 {
   left: 12px;
   transform: translateY(-50%);
   color: #999;
-  background: rgb(179, 11, 11);
   padding: 0 5px;
   transition: all 0.2s ease-in-out;
   pointer-events: none;
@@ -70,7 +83,6 @@ h2 {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgb(255, 255, 255);
   padding: 0 5px;
   transition: all 0.2s ease-in-out;
   pointer-events: none;
