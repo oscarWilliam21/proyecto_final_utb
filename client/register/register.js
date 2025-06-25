@@ -1,38 +1,46 @@
- document.getElementById("form-registro").addEventListener("submit", async function (e) {
-    e.preventDefault(); // Evita recargar la página
+document.getElementById("form-registro").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-    const nombre = document.getElementById("nombre").value;
-    const correo = document.getElementById("correo").value;
-    const password = document.getElementById("password").value;
-    const telefono = document.getElementById("telefono").value;
-    const plan = document.getElementById("plan").value;
+  const nombre = document.getElementById("nombre").value.trim();
+  const correo = document.getElementById("correo").value.trim();
+  const password = document.getElementById("password").value;
+  const confirmarPassword = document.getElementById("confirmarPassword").value;
 
-    try {
-      const response = await fetch("http://127.0.0.1:5000/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          nombre: nombre,
-          correo: correo,
-          password: password,
-          telefono: telefono,
-          plan: plan
-        })
-      });
+  // Validaciones
+  if (password.length < 6) {
+    alert("La contraseña debe tener al menos 6 caracteres.");
+    return;
+  }
 
-      const data = await response.json();
+  if (password !== confirmarPassword) {
+    alert("Las contraseñas no coinciden.");
+    return;
+  }
 
-      if (response.ok) {
-        alert("¡Registro exitoso!");
-        console.log(data);
-        // Redirige a login o dashboard si es necesario
-      } else {
-        alert("Error: " + (data.mensaje || "No se pudo registrar"));
-      }
-    } catch (error) {
-      console.error("Error de red:", error);
-      alert("No se pudo conectar al servidor.");
+  try {
+    const response = await fetch("http://127.0.0.1:5000/api/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        nombre: nombre,
+        correo: correo,
+        password: password,
+      })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("¡Registro exitoso!");
+      console.log(data);
+      window.location.href = "../login/login.html"; // Redirigir al login
+    } else {
+      alert("Error: " + (data.mensaje || "No se pudo registrar"));
     }
-  });
+  } catch (error) {
+    console.error("Error de red:", error);
+    alert("No se pudo conectar al servidor.");
+  }
+});

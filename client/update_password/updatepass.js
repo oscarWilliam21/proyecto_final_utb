@@ -2,7 +2,7 @@ document.getElementById("reset-form").addEventListener("submit", async function 
   e.preventDefault(); // Evita el reload de página
   console.log("Enviando solicitud para restablecer contraseña...");
 
-  const email = document.getElementById("email").value;
+  const passwordCurrent = document.getElementById("password_actual").value;
   const newPassword = document.getElementById("new-password").value;
   const confirmPassword = document.getElementById("confirm-password").value;
   const usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -20,13 +20,13 @@ document.getElementById("reset-form").addEventListener("submit", async function 
   }
 
   try {
-    const response = await fetch(`http://127.0.0.1:5000/user/update/password/${userId}`, { // ✅ Uso correcto de template string
+    const response = await fetch(`http://127.0.0.1:5000/user/update/password/${userId}`, { 
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        correo: email,
+        password_actual: passwordCurrent,
         nueva_contrasena: newPassword,
         confirmPassword: confirmPassword
       })
@@ -36,10 +36,9 @@ document.getElementById("reset-form").addEventListener("submit", async function 
     console.log("Respuesta del servidor:", data);
 
     if (response.ok) {
-      alert("Contraseña actualizada correctamente. Ahora puedes iniciar sesión.");
-      window.location.href = "../login/login.html";
+      alert("Contraseña actualizada correctamente.");
     } else {
-      alert(data.error || "Error al restablecer la contraseña");
+      alert(data.error || "Error al actualizar la contraseña");
     }
   } catch (error) {
     console.error("Error en la solicitud:", error);

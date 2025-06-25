@@ -1,3 +1,5 @@
+
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
@@ -62,5 +64,33 @@ fetch(API_URL)
     });
   }
   
+
+  // Lógica para cerrar sesión
+document.addEventListener("DOMContentLoaded", () => {
+  const cerrarSesionBtn = document.getElementById("cerrar-sesion");
+  
+  if (cerrarSesionBtn) {
+    cerrarSesionBtn.addEventListener("click", (e) => {
+      e.preventDefault(); 
+      
+      localStorage.removeItem("token");
+      localStorage.removeItem("usuario");
+
+      window.location.href = "../landing/landingPage.html";
+    });
+  }
+
+   // Redirigir a actualizar contraseña
+   const actualizarPassBtn = document.getElementById("actualizar-contraseña");
+   if (actualizarPassBtn) {
+     actualizarPassBtn.addEventListener("click", (e) => {
+       e.preventDefault();
+       window.location.href = "../update_password/updatepass.html";
+     });
+   }
+});
+
+
+
   
 

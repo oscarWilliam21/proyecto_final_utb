@@ -29,3 +29,13 @@ document.getElementById("login-form").addEventListener("submit", async function 
         alert(data.error || "Error desconocido");
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+const suscribirseBtn = document.querySelector(".suscribirse-btn");
+
+if (suscribirseBtn) {
+    suscribirseBtn.addEventListener("click", () => {
+    window.location.href = "../register/register.html";
+    });
+}
+});

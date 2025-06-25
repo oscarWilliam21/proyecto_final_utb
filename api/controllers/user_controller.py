@@ -19,15 +19,10 @@ def register_user(data):
     nombre = data.get("nombre")
     correo = data.get("correo")
     password = data.get("password")
-    telefono = data.get("telefono", "")
-    plan = data.get("plan", "básico")
 
     # Validar los campos
     if not nombre or not correo or not password:
         return jsonify({"error": "Faltan campos obligatorios"}), 400
-
-    if plan not in PLANES_VALIDOS:
-        return jsonify({"error": "Plan inválido"}), 400
 
     if db.usuarios.find_one({"correo": correo}):
         return jsonify({"error": "El usuario ya existe"}), 409
@@ -37,8 +32,6 @@ def register_user(data):
         "nombre": nombre,
         "correo": correo,
         "password": generate_password_hash(password),
-        "telefono": telefono,
-        "plan": plan,
         "fecha_registro": datetime.utcnow().strftime("%Y-%m-%d")
     }
 
@@ -50,14 +43,11 @@ def register_user(data):
 
 def update_user(usuario_id, data):
     nombre = data.get("nombre")
-    telefono = data.get("telefono")
 
     update_fields = {}
 
     if nombre:
         update_fields["nombre"] = nombre
-    if telefono is not None:
-        update_fields["telefono"] = telefono
     if not update_fields:
         return jsonify({"error": "No se enviaron datos para actualizar"}), 400
 

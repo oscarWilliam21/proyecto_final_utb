@@ -5,14 +5,28 @@
   <title>Mi StreamZone</title>
   <link rel="stylesheet" href="home.css">
 </head>
+
+<script type="module">
+  import { verificarAutenticacion } from '../utils/verificarAutenticacion.js';
+  verificarAutenticacion();
+</script>
+
 <body>
   <header class="navbar">
     <img src="../assets/logo/streamZone.png" alt="StreamZone" class="logo">
-    <nav>
-      <a href="#">Inicio</a>
+    <nav class="nav-links">
+      <a href="../home/home.html">Inicio</a>
       <a href="#">Series</a>
       <a href="#">Películas</a>
       <a href="#">Mi Lista</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Cuenta ▾</button>
+        <div class="dropdown-content">
+          <a href="#" id="actualizar-contraseña">Actualizar contraseña</a>
+          <a href="#" id="cerrar-sesion">Cerrar sesión</a>
+        </div>
+      </div>
     </nav>
   </header>
 
