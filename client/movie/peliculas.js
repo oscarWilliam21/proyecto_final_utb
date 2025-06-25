@@ -24,7 +24,7 @@ function nextSlide() {
 
 setInterval(nextSlide, 5000);
 
-const API_URL = "http://127.0.0.1:5000/api/movie/movies";
+const API_URL = "https://streamzone-g6v6.onrender.com/api/movie/movies";
 
 fetch(API_URL)
   .then(response => response.json())

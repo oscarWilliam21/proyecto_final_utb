@@ -25,8 +25,8 @@ function nextSlide() {
 
 setInterval(nextSlide, 5000);
 
-const API_PELICULAS = "http://127.0.0.1:5000/api/movie/movies";
-const API_SERIES = "http://127.0.0.1:5000/api/movie/series";
+const API_PELICULAS = "https://streamzone-g6v6.onrender.com/api/movie/movies";
+const API_SERIES = "https://streamzone-g6v6.onrender.com/api/movie/series";
 
 fetch(API_PELICULAS)
   .then((response) => response.json())

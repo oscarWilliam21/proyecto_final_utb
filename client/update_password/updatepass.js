@@ -20,7 +20,7 @@ document.getElementById("reset-form").addEventListener("submit", async function 
   }
 
   try {
-    const response = await fetch(`http://127.0.0.1:5000/api/user/update/password/${userId}`, { 
+    const response = await fetch(`https://streamzone-g6v6.onrender.com/api/user/update/password/${userId}`, { 
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
