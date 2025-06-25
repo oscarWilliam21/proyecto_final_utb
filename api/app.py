@@ -25,6 +25,10 @@ def index():
     colecciones = db.list_collection_names()
     return jsonify({"mensaje": "Bienvenido a StreamZone API", "colecciones": colecciones})
 
+@app.route("/ping")
+def ping():
+    return jsonify({"message": "pong"})
+
 
 register_routes(app)
 

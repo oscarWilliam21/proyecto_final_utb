@@ -35,7 +35,7 @@ document.getElementById("form-registro").addEventListener("submit", async functi
     if (response.ok) {
       alert("¡Registro exitoso!");
       console.log(data);
-      window.location.href = "../login/login.html"; // Redirigir al login
+      window.location.href = "../login/login.html";
     } else {
       alert("Error: " + (data.error || data.mensaje || "No se pudo registrar"));
     }
