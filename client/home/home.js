@@ -3,6 +3,13 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
+const usuario = JSON.parse(localStorage.getItem("usuario"));
+const name = document.getElementById('username');
+
+if (usuario && name) {
+  name.textContent = `Hola, ${usuario.nombre}`;
+}
+
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
@@ -22,6 +29,8 @@ setInterval(nextSlide, 5000);
 
 const API_URL = "http://127.0.0.1:5000/api/movie/movies";
 
+
+
 fetch(API_URL)
   .then(response => response.json())
   .then(data => {
@@ -31,6 +40,7 @@ fetch(API_URL)
   .catch(error => console.error('Error al cargar las películas:', error));
 
   function mostrarPeliculas(peliculas) {
+    console.log(peliculas)
     const popularesRow = document.querySelectorAll(".row")[0].querySelector(".row-posters");
     const accionRow = document.querySelectorAll(".row")[1].querySelector(".row-posters");
   
@@ -45,7 +55,6 @@ fetch(API_URL)
       slide.querySelector('p').textContent = `Generos: ${pelicula.genero.join(', ')}`;
     });
   
-    // Cargar imagenes en las filas
     peliculas.forEach(pelicula => {
       const img = document.createElement("img");
       img.src = pelicula.imagen;
@@ -53,7 +62,8 @@ fetch(API_URL)
       img.style.cursor = "pointer";
   
       img.addEventListener("click", () => {
-        window.open(pelicula.reproducir_url, "_blank");
+        localStorage.setItem("peliculaSeleccionada", JSON.stringify(pelicula));
+        window.location.href = "../movie/detalles.html";
       });
   
       if (pelicula.genero.includes("Acción")) {
