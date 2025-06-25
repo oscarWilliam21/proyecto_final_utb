@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("genero").textContent = data.genero.join(", ");
     document.getElementById("anio").textContent = data.año || "Desconocido";
   
-    // Extraer director y reparto desde la descripción si están disponibles
+    // se extrae director y reparto si en caso estan disponibles
     const directorMatch = data.descripcion.match(/Director:\s*(.*)/i);
     const repartoMatch = data.descripcion.match(/Reparto:\s*(.*)/i);
   
