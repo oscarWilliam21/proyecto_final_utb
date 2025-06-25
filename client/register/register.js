@@ -37,7 +37,7 @@ document.getElementById("form-registro").addEventListener("submit", async functi
       console.log(data);
       window.location.href = "../login/login.html"; // Redirigir al login
     } else {
-      alert("Error: " + (data.mensaje || "No se pudo registrar"));
+      alert("Error: " + (data.error || data.mensaje || "No se pudo registrar"));
     }
   } catch (error) {
     console.error("Error de red:", error);
