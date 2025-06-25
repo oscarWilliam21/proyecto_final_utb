@@ -7,12 +7,12 @@ document.getElementById("reset-form").addEventListener("submit", async function 
   const confirmPassword = document.getElementById("confirm-password").value;
   const usuario = JSON.parse(localStorage.getItem("usuario"));
 
-  if (!usuario || !usuario._id) {
+  if (!usuario || !usuario.id) {
     alert("No se encontró información del usuario en el almacenamiento local.");
     return;
   }
 
-  const userId = usuario._id;
+  const userId = usuario.id;
 
   if (newPassword !== confirmPassword) {
     alert("Las contraseñas no coinciden.");
@@ -20,15 +20,15 @@ document.getElementById("reset-form").addEventListener("submit", async function 
   }
 
   try {
-    const response = await fetch(`http://127.0.0.1:5000/user/update/password/${userId}`, { 
+    const response = await fetch(`http://127.0.0.1:5000/api/user/update/password/${userId}`, { 
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
         password_actual: passwordCurrent,
-        nueva_contrasena: newPassword,
-        confirmPassword: confirmPassword
+        nueva_password: newPassword,
+        confirmar_password: confirmPassword
       })
     });
 

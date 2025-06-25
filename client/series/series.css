@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Dropdown (Cuenta) */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .dropbtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1a1a1a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+    z-index: 1001;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #333;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropbtn:hover {
+    color: #e50914;
+  }
+  
+  
+  .banner {
+    height: 400px;
+    background-image: url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+  }
+  
+  .banner h2 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .row {
+    padding: 20px;
+  }
+  
+  .row h3 {
+    margin: 0 0 10px 0;
+  }
+  
+  .row-posters {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .row-posters img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .row-posters img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    height: 500px;
+  }
+  
+  .slide-info {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .slide-info h2 {
+    margin: 0 0 10px 0;
+  }
+  
+  .banner {
+    height: 400px;
+    background-image: url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    margin-top: 50px;
+  }
+  
+  .banner h2 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .footer {
+    background-color: #111;
+    color: #777;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .footer a {
+    color: #777;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-cols .col {
+    min-width: 120px;
+    text-align: left;
+  }
+  
+  .footer-copy {
+    font-size: 12px;
+    color: #555;
+  }
+  

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi StreamZone</title>
+  <link rel="stylesheet" href="peliculas.css">
+</head>
+
+<script type="module">
+  import { verificarAutenticacion } from '../utils/verificarAutenticacion.js';
+  verificarAutenticacion();
+</script>
+
+<body>
+  <header class="navbar">
+    <img src="../assets/logo/streamZone.png" alt="StreamZone" class="logo">
+    <nav class="nav-links">
+      <a href="../home/home.html">Inicio</a>
+      <a href="../series/series.html">Series</a>
+      <a href="./peliculas.html">Películas</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Cuenta ▾</button>
+        <div class="dropdown-content">
+          <p id="username" style="padding: 8px 16px; color: #fff;">Hola, usuario</p>
+          <a href="#" id="actualizar-contraseña">Actualizar contraseña</a>
+          <a href="#" id="cerrar-sesion">Cerrar sesión</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <section class="carousel">
+        <div class="slide active">
+          <div class="slide-info">
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-info">
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-info">
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-info">
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-info">
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+      </section>
+    <section class="banner">
+      <h2>Película Destacada</h2>
+    </section>
+
+    <section class="row">
+      <h3>Drama</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+
+    <section class="row">
+      <h3>Acción</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Comedia</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Terror</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Suspenso</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Crimen</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Thriller</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Romance</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Aventura</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Sobrenatural</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Misterio</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <section class="row">
+      <h3>Urbano</h3>
+      <div class="row-posters">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
+      </div>
+    </section>
+    <script src="peliculas.js"></script>
+</body>
+<footer class="footer">
+  <p>¿Preguntas? Llama al <a href="#">01 800 917 1564</a></p>
+  <div class="footer-cols">
+    <div class="col">
+      <a href="#">Preguntas frecuentes</a>
+      <a href="#">Centro de ayuda</a>
+      <a href="#">Cuenta</a>
+      <a href="#">Prensa</a>
+    </div>
+    <div class="col">
+      <a href="#">Inversionistas</a>
+      <a href="#">Empleo</a>
+      <a href="#">Formas de ver</a>
+      <a href="#">Términos de uso</a>
+    </div>
+    <div class="col">
+      <a href="#">Privacidad</a>
+      <a href="#">Preferencias de cookies</a>
+      <a href="#">Información corporativa</a>
+      <a href="#">Contáctanos</a>
+    </div>
+    <div class="col">
+      <a href="#">Prueba de velocidad</a>
+      <a href="#">Avisos legales</a>
+      <a href="#">Originales de StreamZone</a>
+    </div>
+  </div>
+  <p class="footer-copy">StreamZone Colombia</p>
+</footer>
+</html>

@@ -15,10 +15,9 @@
   <header class="navbar">
     <img src="../assets/logo/streamZone.png" alt="StreamZone" class="logo">
     <nav class="nav-links">
-      <a href="../home/home.html">Inicio</a>
-      <a href="#">Series</a>
-      <a href="#">Películas</a>
-      <a href="#">Mi Lista</a>
+      <a href="./home.html">Inicio</a>
+      <a href="../series/series.html">Series</a>
+      <a href="../movie/peliculas.html">Películas</a>
       
       <div class="dropdown">
         <button class="dropbtn">Cuenta ▾</button>
@@ -67,25 +66,16 @@
       <h2>Película Destacada</h2>
     </section>
 
-    <section class="row">
-      <h3>Populares</h3>
-      <div class="row-posters">
-        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
-        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
-        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
-        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
-      </div>
+    <section>
+      <h2>Películas Populares</h2>
+      <div class="row-posters" id="peliculas-row"></div>
     </section>
-
-    <section class="row">
-      <h3>Acción</h3>
-      <div class="row-posters">
-        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
-        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
-        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
-        <img src="https://via.placeholder.com/200x300" alt="Pelicula">
-      </div>
+    
+    <section>
+      <h2>Series Populares</h2>
+      <div class="row-posters" id="series-row"></div>
     </section>
+    
     <script src="home.js"></script>
 </body>
 <footer class="footer">
