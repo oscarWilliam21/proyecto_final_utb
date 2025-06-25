@@ -18,7 +18,7 @@ document.getElementById("form-registro").addEventListener("submit", async functi
   }
 
   try {
-    const response = await fetch("https://streamzone-g6v6.onrender.com/api/auth/register", {
+    const response = await fetch("https://streamzone-g6v6.onrender.com/api/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
