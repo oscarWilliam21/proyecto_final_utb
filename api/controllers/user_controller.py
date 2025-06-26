@@ -111,29 +111,41 @@ def send_reset_email(data):
         subject="Recuperación de contraseña",
         sender=os.getenv("MAIL_USERNAME"),
         recipients=[correo],
-        body=f"""
-            Hola {usuario['nombre']},
+        html=f"""
+        <div style="background-color:#000000; padding:40px 20px; color:#ffffff; font-family:Arial, sans-serif;">
+            <div style="max-width:600px; margin:0 auto; background-color:#121212; border-radius:8px; overflow:hidden; box-shadow:0 0 10px rgba(255,255,255,0.1);">
+                <div style="background-color:#f1c40f; padding:20px; text-align:center;">
+                    <h1 style="margin:0; color:#000000;">StreamZone</h1>
+                </div>
+                <div style="padding:30px;">
+                    <p style="font-size:18px;">Hola <strong>{usuario['nombre']}</strong>,</p>
+                    <p style="font-size:16px;">Hemos recibido una solicitud para restablecer tu contraseña.</p>
+                    <p style="font-size:16px;">Puedes hacerlo haciendo clic en el siguiente botón:</p>
 
-            Recibimos una solicitud para restablecer tu contraseña. 
-            Puedes hacerlo desde el siguiente enlace:
+                    <div style="text-align:center; margin:30px 0;">
+                        <a href="{reset_url}" style="background-color:#f1c40f; color:#000000; padding:12px 24px; text-decoration:none; font-weight:bold; border-radius:5px;">
+                            Restablecer contraseña
+                        </a>
+                    </div>
 
-            {reset_url}
-
-            Este enlace estará activo durante 15 minutos.
-
-            Si no solicitaste esto, puedes ignorar este mensaje.
-
-            Atentamente,
-            El equipo de soporte
-            """    )
-        
+                    <p style="font-size:14px; color:#cccccc;">
+                        Si no solicitaste este cambio, puedes ignorar este correo. El enlace expirará en 15 minutos.
+                    </p>
+                    <p style="font-size:14px; color:#cccccc;">— El equipo de soporte de StreamZone</p>
+                </div>
+            </div>
+        </div>
+        """,
+        content_type='html'
+    )
+   
     try:
         mail.send(msg)
         return jsonify({"mensaje": "Se ha enviado el correo de recuperación"}), 200
     except Exception as e:
         print(str(e))
         return jsonify({"error": "Error al enviar el correo"}), 500
-
+  
 #controller para restablecer la contraseña olvidada
 def reset_password(data):
     token = data.get("token")
