@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Listas</title>
+  <link rel="stylesheet" href="mis-listas.css" />
+</head>
+<script type="module">
+    import { verificarAutenticacion } from '../utils/verificarAutenticacion.js';
+    verificarAutenticacion();
+  </script>
+<body>
+    <header class="navbar">
+        <img src="../assets/logo/streamZone.png" alt="StreamZone" class="logo">
+        <nav class="nav-links">
+          <a href="../home/home.html">Inicio</a>
+          <a href="../series/series.html">Series</a>
+          <a href="../movie/peliculas.html">Películas</a>
+          <a href="./mis-listas.html" class="link">Mi lista</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Cuenta ▾</button>
+            <div class="dropdown-content">
+              <p id="username" style="padding: 8px 16px; color: #fff;">Hola, usuario</p>
+              <a href="#" id="actualizar-contraseña">Actualizar contraseña</a>
+              <a href="#" id="cerrar-sesion">Cerrar sesión</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+  <!-- <header>
+
+    <h1>Mis Listas</h1>
+  </header> -->
+
+  <main>
+    <section>
+      <h2>Películas Favoritas</h2>
+      <div id="peliculas-container" class="lista-container"></div>
+    </section>
+
+    <section>
+      <h2>Series Favoritas</h2>
+      <div id="series-container" class="lista-container"></div>
+    </section>
+  </main>
+
+  <script src="mis-listas.js"></script>
+</body>
+</html>

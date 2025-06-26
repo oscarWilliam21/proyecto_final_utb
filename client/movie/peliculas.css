@@ -9,6 +9,8 @@ body {
   width: 120px;
 }
 
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -36,6 +38,16 @@ body {
   font-weight: 500;
 }
 
+.link{
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: yellow;
+}
+
+.navbar nav .link {
+  color: yellow;
+}
 /* Dropdown (Cuenta) */
 .dropdown {
   position: relative;

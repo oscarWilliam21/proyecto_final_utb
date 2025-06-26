@@ -2,6 +2,7 @@ let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 const usuario = JSON.parse(localStorage.getItem("usuario"));
+console.log(usuario)
 const name = document.getElementById("username");
 
 if (usuario && name) {

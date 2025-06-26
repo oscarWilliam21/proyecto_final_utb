@@ -6,6 +6,11 @@
   <title>Detalles de Película</title>
   <link rel="stylesheet" href="seriesDetails.css" />
 </head>
+<script type="module">
+  import { verificarAutenticacion } from '../utils/verificarAutenticacion.js';
+  verificarAutenticacion();
+</script>
+
 <body>
   <div class="detalle-container">
     <div class="video-section">
@@ -14,6 +19,10 @@
     <div class="info-section">
       <h1 id="titulo"></h1>
       <p id="descripcion"></p>
+      <div id="favorito-container" class="favorito">
+        <img id="icono-favorito" src="../assets/images/corazon.png" alt="Favorito" />
+        <p id="texto-favorito">Agregar a mi lista</p>
+      </div>
       <p><strong>Géneros:</strong> <span id="genero"></span></p>
       <p><strong>Año:</strong> <span id="anio"></span></p>
       <p><strong>Director:</strong> <span id="director"></span></p>

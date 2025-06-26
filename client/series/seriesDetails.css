@@ -12,8 +12,7 @@ body {
   
   .detalle-container {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    width: 95%;
     margin-top: 50px;
     padding: 20px;
     gap: 30px;
@@ -65,4 +64,21 @@ body {
   #capitulos-container  button:hover {
     background-color: #d4ceb8;
   }
+
+  .favorito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.13);
+  }
+  
+  .favorito img {
+    width: 32px;
+    height: 32px;
+  }
+  
   
