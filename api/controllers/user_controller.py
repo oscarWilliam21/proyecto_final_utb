@@ -105,7 +105,7 @@ def send_reset_email(data):
         "exp": datetime.utcnow() + timedelta(minutes=15)
     }, str(SECRET_KEY), algorithm="HS256")
 
-    reset_url = f"{FRONTEND_URL}/client/recuperar/recuperar.html?token={token}"
+    reset_url = f"{FRONTEND_URL}/client/recuperar_password/recuperar.html?token={token}"
 
     msg = Message(
         subject="Recuperación de contraseña",
