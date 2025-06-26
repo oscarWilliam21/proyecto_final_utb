@@ -71,11 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("genero").textContent = data.genero.join(", ");
     document.getElementById("anio").textContent = data.año || "Desconocido";
 
-    const directorMatch = data.descripcion.match(/Director:\s*(.*)/i);
-    const repartoMatch = data.descripcion.match(/Reparto:\s*(.*)/i);
+    const directorMatch = data.director;
+    const repartoMatch = data.reparto;
   
-    document.getElementById("director").textContent = directorMatch ? directorMatch[1] : "Desconocido";
-    document.getElementById("reparto").textContent = repartoMatch ? repartoMatch[1] : "Desconocido";
+    document.getElementById("director").textContent = directorMatch ? directorMatch : "Desconocido";
+    document.getElementById("reparto").textContent = repartoMatch ? repartoMatch : "Desconocido";
   
     const trailer = data.trailer_url.replace("watch?v=", "embed/").split("&")[0];
     document.getElementById("trailer").src = `${trailer}?autoplay=1`;
