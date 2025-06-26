@@ -1,5 +1,5 @@
 document.getElementById("reset-form").addEventListener("submit", async function (e) {
-  e.preventDefault(); // Evita el reload de página
+  e.preventDefault(); 
   console.log("Enviando solicitud para restablecer contraseña...");
 
   const passwordCurrent = document.getElementById("password_actual").value;

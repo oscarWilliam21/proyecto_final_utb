@@ -1,5 +1,5 @@
 document.getElementById("login-form").addEventListener("submit", async function (e) {
-    e.preventDefault(); // Evita recargar la página
+    e.preventDefault(); 
     console.log('estoy iniciando sesion');
     const correo = document.getElementById("correo").value;
     const password = document.getElementById("password").value;

@@ -105,7 +105,7 @@ def send_reset_email(data):
         "exp": datetime.utcnow() + timedelta(minutes=15)
     }, str(SECRET_KEY), algorithm="HS256")
 
-    reset_url = f"{FRONTEND_URL}/reset-password?token={token}"
+    reset_url = f"{FRONTEND_URL}/client/recuperar/recuperar.html?token={token}"
 
     msg = Message(
         subject="Recuperación de contraseña",
@@ -137,8 +137,8 @@ def send_reset_email(data):
 #controller para restablecer la contraseña olvidada
 def reset_password(data):
     token = data.get("token")
-    nueva = data.get("nueva_password")
-    confirmar = data.get("confirmar_password")
+    nueva = data.get("new_password")
+    confirmar = data.get("confirm_password")
 
     if not token or not nueva or not confirmar:
         return jsonify({"error": "Todos los campos son obligatorios"}), 400

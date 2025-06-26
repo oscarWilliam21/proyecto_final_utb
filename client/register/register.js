@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const correoGuardado = localStorage.getItem("email");
+  if (correoGuardado) {
+    const inputCorreo = document.getElementById("correo");
+    if (inputCorreo) {
+      inputCorreo.value = correoGuardado;
+    }
+  }
+});
+
+
 document.getElementById("form-registro").addEventListener("submit", async function (e) {
   e.preventDefault();
 
