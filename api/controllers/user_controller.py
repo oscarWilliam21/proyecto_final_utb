@@ -26,14 +26,16 @@ def register_user(data):
         "nombre": nombre,
         "correo": correo,
         "password": generate_password_hash(password),
+        "mis_peliculas_favoritas" : [],
+        "mis_series_favoritas" : [],
         "fecha_registro": datetime.utcnow().strftime("%Y-%m-%d")
     }
 
     db.usuarios.insert_one(nuevo_usuario)
 
     return jsonify({"mensaje": "Usuario registrado exitosamente"}), 201
-
-
+  
+ 
 def update_user(usuario_id, data):
     nombre = data.get("nombre")
 
