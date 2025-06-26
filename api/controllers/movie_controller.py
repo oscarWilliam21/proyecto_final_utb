@@ -15,8 +15,8 @@ def get_all_movies():
         result = []
 
         for movie in movies:
-            movie['id'] = str(movie['_id'])  # Convertimos ObjectId a string
-            del movie['_id']  # Eliminamos el campo original
+            movie['id'] = str(movie['_id']) 
+            del movie['_id'] 
             result.append(movie)
 
         return result
@@ -26,8 +26,14 @@ def get_all_movies():
 
 def get_all_series():
     try:
-        series = list(series_collection.find({}, {'_id': 0}))
-        return series
+        series = list(series_collection.find())
+        result = []
+
+        for serie in series:
+            serie['id'] = str(serie['_id']) 
+            del serie['_id'] 
+            result.append(serie)
+        return result
     except Exception as e:
         raise Exception(f"Error al obtener películas: {e}")
 
