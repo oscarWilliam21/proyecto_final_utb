@@ -110,7 +110,7 @@ def send_reset_email(data):
     msg = Message(
         subject="Recuperación de contraseña",
         sender=os.getenv("MAIL_USERNAME"),
-        recipients=[correo],
+        recipients=[correo],     
         html=f"""
         <div style="background-color:#000000; padding:40px 20px; color:#ffffff; font-family:Arial, sans-serif;">
             <div style="max-width:600px; margin:0 auto; background-color:#121212; border-radius:8px; overflow:hidden; box-shadow:0 0 10px rgba(255,255,255,0.1);">
@@ -135,10 +135,9 @@ def send_reset_email(data):
                 </div>
             </div>
         </div>
-        """,
-        content_type='html'
-    )
-   
+        """
+        )
+
     try:
         mail.send(msg)
         return jsonify({"mensaje": "Se ha enviado el correo de recuperación"}), 200
