@@ -31,6 +31,8 @@ document.getElementById("form-registro").addEventListener("submit", async functi
     });
 
     const data = await response.json();
+    console.log("Respuesta del servidor:", data);
+
 
     if (response.ok) {
       alert("¡Registro exitoso!");

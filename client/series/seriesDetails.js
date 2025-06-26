@@ -9,21 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("descripcion").textContent = data.descripcion;
     document.getElementById("genero").textContent = data.genero.join(", ");
     document.getElementById("anio").textContent = data.año || "Desconocido";
-  
-    // Extraer director y reparto si están en la descripción
+
     const directorMatch = data.descripcion.match(/Director:\s*(.*)/i);
     const repartoMatch = data.descripcion.match(/Reparto:\s*(.*)/i);
   
     document.getElementById("director").textContent = directorMatch ? directorMatch[1] : "Desconocido";
     document.getElementById("reparto").textContent = repartoMatch ? repartoMatch[1] : "Desconocido";
   
-    // Reemplazar watch?v= por embed/ si es necesario
     const trailer = data.trailer_url.replace("watch?v=", "embed/").split("&")[0];
     document.getElementById("trailer").src = `${trailer}?autoplay=1&mute=1`;
   
-    // Crear botones por cada capítulo
     const contenedor = document.getElementById("capitulos-container");
-    contenedor.innerHTML = ''; // Limpia si hay algo
+    contenedor.innerHTML = ''; 
   
     if (Array.isArray(data.capitulos)) {
       data.capitulos.forEach((url, index) => {
